@@ -49,7 +49,7 @@ Then continue from step 3. Without a `server/.env`, the defaults match `docker-c
 
 ### Test accounts
 
-All seeded by `npm run db:seed`. The password for all three is **`Password123!`**. The sign-in page can also fill them in for you.
+All seeded by `npm run db:seed`. The password for all three is **`Password123!`**.
 
 | Email                     | Role  | Sees                                       |
 | ------------------------- | ----- | ------------------------------------------ |

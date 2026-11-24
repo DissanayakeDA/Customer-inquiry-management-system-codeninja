@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
 import { useSessionQuery, useSignIn } from '@/hooks/use-session';
@@ -28,6 +29,15 @@ export function LoginScreen() {
       <div className="login-brand">
         <Brand />
         <div>
+          {/* Decorative: the headline below says the same thing, so screen readers skip it. */}
+          <Image
+            className="login-art"
+            src="/illustrations/customer-relationship-bro.svg"
+            alt=""
+            width={750}
+            height={500}
+            loading="eager"
+          />
           <h1>Every customer inquiry, owned and tracked to resolution.</h1>
           <p>Replace scattered chat threads and spreadsheets with one place to record, assign and resolve customer requests.</p>
           <ul className="login-points">
@@ -41,6 +51,14 @@ export function LoginScreen() {
 
       <div className="login-panel">
         <div className="login-card">
+          {/* Shown only on narrow screens, where the brand panel (and its illustration) is hidden. */}
+          <Image
+            className="login-card-art"
+            src="/illustrations/customer-relationship-rafiki.svg"
+            alt=""
+            width={500}
+            height={500}
+          />
           <h2>Sign in</h2>
           <p>Use your staff account to access the workspace.</p>
 
